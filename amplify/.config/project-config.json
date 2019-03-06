@@ -1,0 +1,17 @@
+{
+    "projectName": "apollo-amplify-kit",
+    "version": "2.0",
+    "frontend": "javascript",
+    "javascript": {
+        "framework": "react",
+        "config": {
+            "SourceDir": "packages/client/src",
+            "DistributionDir": "packages/client/build",
+            "BuildCommand": "yarn build",
+            "StartCommand": "yarn watch"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}

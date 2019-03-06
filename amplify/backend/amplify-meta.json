@@ -1,0 +1,15 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "apollo-amplify-kit-20190301164220-authRole",
+			"UnauthRoleArn": "arn:aws:iam::980667678623:role/apollo-amplify-kit-20190301164220-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::980667678623:role/apollo-amplify-kit-20190301164220-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "apollo-amplify-kit-20190301164220-deployment",
+			"UnauthRoleName": "apollo-amplify-kit-20190301164220-unauthRole",
+			"StackName": "apollo-amplify-kit-20190301164220",
+			"StackId": "arn:aws:cloudformation:us-east-1:980667678623:stack/apollo-amplify-kit-20190301164220/382ed1c0-3c30-11e9-ad11-0eb5200d39ae"
+		}
+	},
+	"api": {}
+}
