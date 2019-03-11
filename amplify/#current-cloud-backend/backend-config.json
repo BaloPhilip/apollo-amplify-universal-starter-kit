@@ -1,6 +1,6 @@
 {
 	"api": {
-		"counter": {
+		"apolloGraphqlApi": {
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {

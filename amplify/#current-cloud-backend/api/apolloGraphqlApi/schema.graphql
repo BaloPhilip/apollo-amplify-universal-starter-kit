@@ -1,0 +1,3 @@
+type Counter @model {
+  amount: Int!
+}

@@ -77,6 +77,19 @@
 					]
 				}
 			}
+		},
+		"apiapolloGraphqlApi": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/apollo-amplify-kit-20190301164220-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"Parameters": {
+					"AppSyncApiName": "apolloGraphqlApi",
+					"DynamoDBBillingMode": "PAY_PER_REQUEST",
+					"S3DeploymentBucket": "apollo-amplify-kit-20190301164220-deployment",
+					"S3DeploymentRootKey": "amplify-appsync-files/1f94801c9eee44e6b0123b45e197840ef1eb20fa",
+					"env": "dev"
+				}
+			}
 		}
 	},
 	"Outputs": {
