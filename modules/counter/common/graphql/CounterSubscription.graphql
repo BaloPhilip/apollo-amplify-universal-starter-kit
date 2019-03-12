@@ -1,5 +1,6 @@
-subscription onCounterUpdated {
-  counterUpdated {
+subscription OnUpdateCounter {
+  onUpdateCounter {
     amount
+    id
   }
 }

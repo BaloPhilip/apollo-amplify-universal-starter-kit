@@ -1,5 +1,6 @@
-mutation addServerCounter($amount: Int!) {
-  addServerCounter(amount: $amount) {
+mutation addServerCounter($input: UpdateCounterInput!) {
+  updateCounter(input: $input) {
     amount
+    id
   }
 }

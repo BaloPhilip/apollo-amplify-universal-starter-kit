@@ -1,6 +1,5 @@
 import React from 'react';
 import { ApolloProvider } from 'react-apollo';
-import { ApolloClient } from 'apollo-client';
 import { Store } from 'redux';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
@@ -17,7 +16,7 @@ import settings from '../../../settings';
 
 log.info(`Connecting to GraphQL backend at: ${apiUrl}`);
 
-const ref: { modules: ClientModule; client: ApolloClient<any>; store: Store } = {
+const ref: { modules: ClientModule; client: any; store: Store } = {
   modules: null,
   client: null,
   store: null
@@ -25,13 +24,7 @@ const ref: { modules: ClientModule; client: ApolloClient<any>; store: Store } = 
 
 export const onAppCreate = (modules: ClientModule, entryModule: NodeModule) => {
   ref.modules = modules;
-  ref.client = createApolloClient({
-    apiUrl,
-    createNetLink: ref.modules.createNetLink,
-    createLink: ref.modules.createLink,
-    connectionParams: ref.modules.connectionParams,
-    clientResolvers: ref.modules.resolvers
-  });
+  ref.client = createApolloClient;
   if (entryModule.hot && entryModule.hot.data && entryModule.hot.data.store) {
     ref.store = entryModule.hot.data.store;
     ref.store.replaceReducer(getStoreReducer(ref.modules.reducers));

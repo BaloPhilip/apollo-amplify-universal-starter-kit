@@ -4,6 +4,7 @@
 export const getCounter = `query GetCounter($id: ID!) {
   getCounter(id: $id) {
     amount
+    id
   }
 }
 `;
@@ -15,6 +16,7 @@ export const listCounters = `query ListCounters(
   listCounters(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       amount
+      id
     }
     nextToken
   }

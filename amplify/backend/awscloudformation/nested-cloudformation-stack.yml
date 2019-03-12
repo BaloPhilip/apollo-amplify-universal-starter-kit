@@ -86,7 +86,7 @@
 					"AppSyncApiName": "apolloGraphqlApi",
 					"DynamoDBBillingMode": "PAY_PER_REQUEST",
 					"S3DeploymentBucket": "apollo-amplify-kit-20190301164220-deployment",
-					"S3DeploymentRootKey": "amplify-appsync-files/1f94801c9eee44e6b0123b45e197840ef1eb20fa",
+					"S3DeploymentRootKey": "amplify-appsync-files/049d761b20bb4e59f56025217edfebb12da9b3fe",
 					"env": "dev"
 				}
 			}

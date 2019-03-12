@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { SchemaLink } from 'apollo-link-schema';
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
@@ -10,7 +9,6 @@ import path from 'path';
 import Helmet, { HelmetData } from 'react-helmet';
 import serialize from 'serialize-javascript';
 import { GraphQLSchema } from 'graphql';
-import { isApiExternal, apiUrl } from '@gqlapp/core-common';
 import ServerModule from '@gqlapp/module-server-ts';
 import ClientModule from '@gqlapp/module-client-react';
 import { createApolloClient, createReduxStore } from '@gqlapp/core-common';
@@ -83,22 +81,12 @@ const Html = ({ content, state, css, helmet }: HtmlProps) => (
 );
 
 const renderServerSide = async (req: any, res: any, schema: GraphQLSchema, modules: ServerModule) => {
-  const schemaLink = new SchemaLink({
-    schema,
-    context: { ...(await modules.createContext(req, res)), req, res }
-  });
-  const client = createApolloClient({
-    apiUrl,
-    createNetLink: !isApiExternal ? () => schemaLink : undefined,
-    createLink: clientModules.createLink,
-    clientResolvers: clientModules.resolvers,
-    connectionParams: null
-  });
+  const client = createApolloClient;
   const store = createReduxStore(clientModules.reducers, {}, client);
   const context: any = {};
   const App = clientModules.getWrappedRoot(
     <Provider store={store}>
-      <ApolloProvider client={client}>
+      <ApolloProvider client={client as any}>
         {clientModules.getDataRoot(
           <StaticRouter location={req.url} context={context}>
             {clientModules.router}

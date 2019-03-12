@@ -26,7 +26,7 @@ export const ServerCounterView = ({ t, children, counter, loading }: ViewProps) 
   } else {
     return (
       <Section>
-        <p>{t('text', { amount: counter.amount })}</p>
+        <p>{t('text', { amount: counter.items[0].amount })}</p>
         {children}
       </Section>
     );

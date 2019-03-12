@@ -1,5 +1,8 @@
-query serverCounterQuery {
-  serverCounter {
-    amount
+query listCountersQuery {
+  listCounters(limit: 1) {
+    items {
+      amount
+      id
+    }
   }
 }

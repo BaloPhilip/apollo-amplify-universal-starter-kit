@@ -17,16 +17,16 @@
 			"providerPlugin": "awscloudformation",
 			"output": {
 				"securityType": "API_KEY",
-				"GraphQLAPIIdOutput": "7ip5fi7nyzh45b4nhxhxbk4iky",
-				"GraphQLAPIEndpointOutput": "https://qe4dtnnocnbkbf3u3wfkyqj5mi.appsync-api.us-east-1.amazonaws.com/graphql",
-				"GraphQLAPIKeyOutput": "da2-c3zzlhmmefegdfjofqpwwi3ala"
+				"GraphQLAPIIdOutput": "qdxbk7vqpjh7dhxlmt2lu4ehf4",
+				"GraphQLAPIEndpointOutput": "https://udztsnggkvhadl4rhaj2fdyaqa.appsync-api.us-east-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-5piiovwdfveudiufd2lkrmrq64"
 			},
 			"providerMetadata": {
 				"s3TemplateURL": "https://s3.amazonaws.com/apollo-amplify-kit-20190301164220-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apiapolloGraphqlApi"
 			},
-			"lastPushTimeStamp": "2019-03-11T11:07:42.780Z",
-			"lastPushDirHash": "HTdzE0A1QhnRb6ub6EaNJWMqABY="
+			"lastPushTimeStamp": "2019-03-11T16:15:04.326Z",
+			"lastPushDirHash": "+dc+754FrX/3VQIUIhtBnSajdY8="
 		}
 	}
 }

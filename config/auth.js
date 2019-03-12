@@ -6,15 +6,15 @@ export default {
     enabled: false
   },
   session: {
-    enabled: true
+    enabled: false
   },
   jwt: {
-    enabled: true,
+    enabled: false,
     tokenExpiresIn: '1m',
     refreshTokenExpiresIn: '7d'
   },
   password: {
-    confirm: true,
+    confirm: false,
     sendConfirmationEmail: true,
     sendAddNewUserEmail: true,
     minLength: 8,
