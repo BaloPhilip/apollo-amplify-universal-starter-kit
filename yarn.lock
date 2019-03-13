@@ -3373,6 +3373,24 @@ apollo-link-dedup@^1.0.0:
   dependencies:
     apollo-link "^1.2.6"
 
+apollo-link-error@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/apollo-link-error/-/apollo-link-error-1.1.8.tgz#3a957b22b843cf6c307d516709cdc42371c9aafe"
+  integrity sha512-5hbMIBaINWOsZapWgTF8H2X0q3NjrQD/y4HlqDnUeLmT12OqejLasNh+EFE6q37/l28UHQu1/AuyRn15J7gvCA==
+  dependencies:
+    apollo-link "^1.2.9"
+    apollo-link-http-common "^0.2.11"
+    tslib "^1.9.3"
+
+apollo-link-http-common@^0.2.11:
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/apollo-link-http-common/-/apollo-link-http-common-0.2.11.tgz#d4e494ed1e45ea0e0c0ed60f3df64541d0de682d"
+  integrity sha512-FjtzEDiG6blH/2MR4fpVNoxdZUFmddP0sez34qnoLaYz6ABFbTDlmRE/dVN79nPExM4Spfs/DtW7KRqyjJ3tOg==
+  dependencies:
+    apollo-link "^1.2.9"
+    ts-invariant "^0.3.2"
+    tslib "^1.9.3"
+
 apollo-link-http-common@^0.2.4:
   version "0.2.8"
   resolved "https://registry.npmjs.org/apollo-link-http-common/-/apollo-link-http-common-0.2.8.tgz#c6deedfc2739db8b11013c3c2d2ccd657152941f"
@@ -3433,6 +3451,16 @@ apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.1, apollo-link@^1.2.2, 
   dependencies:
     apollo-utilities "^1.0.0"
     zen-observable-ts "^0.8.13"
+
+apollo-link@^1.2.9:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.2.9.tgz#40a8f0b90716ce3fd6beb27b7eae1108b92e0054"
+  integrity sha512-ZLUwthOFZq4lxchQ2jeBfVqS/UDdcVmmh8aUw6Ar9awZH4r+RgkcDeu2ooFLUfodWE3mZr7wIZuYsBas/MaNVA==
+  dependencies:
+    apollo-utilities "^1.2.1"
+    ts-invariant "^0.3.2"
+    tslib "^1.9.3"
+    zen-observable-ts "^0.8.16"
 
 apollo-logger@^0.3.0:
   version "0.3.0"
@@ -9720,7 +9748,21 @@ graphql-upload@^8.0.2:
     http-errors "^1.7.1"
     object-path "^0.11.4"
 
-graphql@0.13.0, graphql@14.1.1, graphql@^0.11.7, graphql@^14.1.1:
+graphql@0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.13.0.tgz#d1b44a282279a9ce0a6ec1037329332f4c1079b6"
+  integrity sha512-WlO+ZJT9aY3YrBT+H5Kk+eVb3OVVehB9iRD/xqeHdmrrn4AFl5FIcOpfHz/vnBr6Y6JthGMlnFqU8XRnDjSR7A==
+  dependencies:
+    iterall "1.1.x"
+
+graphql@^0.11.7:
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.11.7.tgz#e5abaa9cb7b7cccb84e9f0836bf4370d268750c6"
+  integrity sha512-x7uDjyz8Jx+QPbpCFCMQ8lltnQa4p4vSYHx6ADe8rVYRTdsyhCJbvSty5DAsLVmU6cGakl+r8HQYolKHxk/tiw==
+  dependencies:
+    iterall "1.1.3"
+
+graphql@^14.1.1:
   version "14.1.1"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.1.1.tgz#d5d77df4b19ef41538d7215d1e7a28834619fac0"
   integrity sha512-C5zDzLqvfPAgTtP8AUPIt9keDabrdRAqSWjj2OPRKrKxI9Fb65I36s1uCs1UUBFnSWTdO7hyHi7z1ZbwKMKF6Q==
@@ -10360,7 +10402,7 @@ immediate@~3.0.5:
   resolved "https://registry.yarnpkg.com/immediate/-/immediate-3.0.6.tgz#9db1dbd0faf8de6fbe0f5dd5e56bb606280de69b"
   integrity sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=
 
-immutability-helper@2.8.1, immutability-helper@^2.6.2:
+immutability-helper@^2.6.2:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/immutability-helper/-/immutability-helper-2.8.1.tgz#3c5ec05fcd83676bfae7146f319595243ad904f4"
   integrity sha512-8AVB5EUpRBUdXqfe4cFsFECsOIZ9hX/Arl8B8S9/tmwpYv3UWvOsXUPOjkuZIMaVxfSWkxCzkng1rjmEoSWrxQ==
@@ -11237,6 +11279,16 @@ items@2.x.x:
   version "2.1.2"
   resolved "https://registry.npmjs.org/items/-/items-2.1.2.tgz#0849354595805d586dac98e7e6e85556ea838558"
   integrity sha512-kezcEqgB97BGeZZYtX/MA8AG410ptURstvnz5RAgyFZ8wQFPMxHY8GpTq+/ZHKT3frSlIthUq7EvLt9xn3TvXg==
+
+iterall@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.3.tgz#1cbbff96204056dde6656e2ed2e2226d0e6d72c9"
+  integrity sha512-Cu/kb+4HiNSejAPhSaN1VukdNTTi/r4/e+yykqjlG/IW+1gZH5b4+Bq3whDX4tvbYugta3r8KTMUiqT3fIGxuQ==
+
+iterall@1.1.x:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.4.tgz#0db40d38fdcf53ae14dc8ec674e62ab190d52cfc"
+  integrity sha512-eaDsM/PY8D/X5mYQhecVc5/9xvSHED7yPON+ffQroBeTuqUVm7dfphMkK8NksXuImqZlVRoKtrNfMIVCYIqaUQ==
 
 iterall@1.2.2, iterall@^1.1.3, iterall@^1.2.1, iterall@^1.2.2:
   version "1.2.2"
@@ -19440,6 +19492,13 @@ ts-invariant@^0.2.1:
   dependencies:
     tslib "^1.9.3"
 
+ts-invariant@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/ts-invariant/-/ts-invariant-0.3.2.tgz#89a2ffeb70879b777258df1df1c59383c35209b0"
+  integrity sha512-QsY8BCaRnHiB5T6iE4DPlJMAKEG3gzMiUco9FEt1jUXQf0XP6zi0idT0i0rMTu8A326JqNSDsmlkA9dRSh1TRg==
+  dependencies:
+    tslib "^1.9.3"
+
 ts-jest@^23.10.4:
   version "23.10.5"
   resolved "https://registry.npmjs.org/ts-jest/-/ts-jest-23.10.5.tgz#cdb550df4466a30489bf70ba867615799f388dd5"
@@ -19748,7 +19807,7 @@ unzip-response@^2.0.1:
   resolved "https://registry.npmjs.org/unzip-response/-/unzip-response-2.0.1.tgz#d2f0f737d16b0615e72a6935ed04214572d56f97"
   integrity sha1-0vD3N9FrBhXnKmk17QQhRXLVb5c=
 
-upath@^1.0.5, upath@^1.1.0:
+upath@^1.0.5:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.2.tgz#3db658600edaeeccbe6db5e684d67ee8c2acd068"
   integrity sha512-kXpym8nmDmlCBr7nKdIx8P2jNBa+pBpIUFRnKJ4dr8htyYGJFokkr2ZvERRtUN+9SY+JqXouNgUPtv6JQva/2Q==
@@ -20143,7 +20202,7 @@ watch@~0.18.0:
     exec-sh "^0.2.0"
     minimist "^1.2.0"
 
-watchpack@^1.5.0, "watchpack@https://github.com/Globegitter/watchpack":
+watchpack@^1.5.0:
   version "1.6.0"
   resolved "https://github.com/Globegitter/watchpack#d903e64a910ab068299f824b04a5e216a15672e9"
   dependencies:
@@ -20984,7 +21043,7 @@ zen-observable-ts@^0.8.13:
   dependencies:
     zen-observable "^0.8.0"
 
-zen-observable-ts@^0.8.9:
+zen-observable-ts@^0.8.16, zen-observable-ts@^0.8.9:
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-0.8.16.tgz#969367299074fe17422fe2f46ee417e9a30cf3fa"
   integrity sha512-pQl75N7qwgybKVsh6WFO+WwPRijeQ52Gn1vSf4uvPFXald9CbVQXLa5QrOPEJhdZiC+CD4quqOVqSG+Ptz5XLA==
