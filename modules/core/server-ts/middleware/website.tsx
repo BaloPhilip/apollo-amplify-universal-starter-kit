@@ -81,7 +81,7 @@ const Html = ({ content, state, css, helmet }: HtmlProps) => (
 );
 
 const renderServerSide = async (req: any, res: any, schema: GraphQLSchema, modules: ServerModule) => {
-  const client = createApolloClient;
+  const client = createApolloClient(clientModules.resolvers);
   const store = createReduxStore(clientModules.reducers, {}, client);
   const context: any = {};
   const App = clientModules.getWrappedRoot(

@@ -24,7 +24,7 @@ const ref: { modules: ClientModule; client: any; store: Store } = {
 
 export const onAppCreate = (modules: ClientModule, entryModule: NodeModule) => {
   ref.modules = modules;
-  ref.client = createApolloClient;
+  ref.client = createApolloClient(ref.modules.resolvers);
   if (entryModule.hot && entryModule.hot.data && entryModule.hot.data.store) {
     ref.store = entryModule.hot.data.store;
     ref.store.replaceReducer(getStoreReducer(ref.modules.reducers));

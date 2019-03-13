@@ -22,11 +22,11 @@ const resolvers = {
     }
   },
   Mutation: {
-    addClientCounter: async (_: any, { increment }: any, { cache }: any): Promise<any> => {
+    addClientCounter: async (_: any, {  }: any, { cache }: any): Promise<any> => {
       const {
         clientCounter: { amount }
       } = cache.readQuery({ query: COUNTER_QUERY_CLIENT });
-      const newAmount = amount + increment;
+      const newAmount = amount + 1;
       await cache.writeData({
         data: {
           clientCounter: {

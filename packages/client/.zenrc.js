@@ -26,13 +26,15 @@ const config = {
   options: {
     stack: ['apollo', 'react', 'styled-components', 'css', 'sass', 'less', 'es6', 'ts', 'webpack', 'i18next'],
     cache: '../../.cache',
-    ssr: false,
+    ssr: true,
     webpackDll: true,
     reactHotLoader: false,
     defines: {
       __DEV__: process.env.NODE_ENV !== 'production',
       __API_URL__: '"/graphql"',
-      'process.env.STRIPE_PUBLIC_KEY': !!process.env.STRIPE_PUBLIC_KEY ? `"${process.env.STRIPE_PUBLIC_KEY}"` : undefined
+      'process.env.STRIPE_PUBLIC_KEY': !!process.env.STRIPE_PUBLIC_KEY
+        ? `"${process.env.STRIPE_PUBLIC_KEY}"`
+        : undefined
     },
     webpackConfig: {
       devServer: {
